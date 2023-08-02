@@ -1,0 +1,14 @@
+NODE_ENV=production
+DB_NAME=dogakaba_coopec_sifa
+DB_USERNAME=coopecsifa
+DB_PASSWORD=@PECXAF@@cir
+DB_HOST=http://98.142.246.121:8529 
+SERVER_APP_URL=https://tg-coopecsifa.dogakaba.net
+SERVER_SIG_URL=http://172.20.20.23:5556
+SERVER_BACKUP_URL=https://tg-coopecsifa.dogakaba.net
+PORT_SERVER_APP=3003
+PORT_BACKUP_APP=3003
+PORT_SIG_APP=6667
+PORT_DB=8529
+JWT_HASH=MIXEOxB5bH8yX0vO6oI2zI8oV6tL6zP
+ADMIN_PWD=01121981

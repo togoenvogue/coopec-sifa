@@ -1,0 +1,1 @@
+sh -c "fuser -k 4444/tcp; cd /home/dogakaba/apps/web/; python3 -m http.server 4444"

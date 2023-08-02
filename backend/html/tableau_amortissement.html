@@ -1,0 +1,344 @@
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        margin: 20x;
+        padding: 15px;
+        font-family: "Times New Roman";
+        font-size: 7px;
+        background: #ffffff;
+        -webkit-print-color-adjust: exact;
+        box-sizing: border-box;
+      }
+
+      .h1 {
+        position: relative;
+        display: block;
+        width: auto;
+        margin: 3px;
+        padding: 5px 0px;
+        background-color: #ffffff;
+        font-size: 14px;
+        font-family: "Times New Roman";
+        font-weight: bold;
+      }
+
+      #app {
+        max-width: 21cm;
+        margin: 0 auto;
+      }
+
+      .header {
+        position: relative;
+        display: block;
+        background: #dddddd;
+        page-break-after: auto;
+        margin: 0px 0px 10px 0px;
+        font-size: 13px;
+        overflow: hidden;
+        text-align: center;
+        padding: 5px 10px;
+        font-weight: bold;
+        border: solid 1px #b5b5b5;
+        font-family: "Times New Roman";
+      }
+
+      .center {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+      }
+
+      .client {
+        width: 800px;
+        border: solid 0px #e40909;
+        background-color: #ffffff;
+        height: 30px;
+        font-family: "Times New Roman";
+      }
+
+      .clt_col_1 {
+        width: 249px;
+        float: left;
+        padding: 6px 8px;
+        font-size: 12px;
+        border: 1px solid #686868;
+        margin: 2px;
+        font-family: "Times New Roman";
+      }
+      .clt_col_2 {
+        width: 502px;
+        float: left;
+        padding: 6px 8px;
+        font-size: 12px;
+        border: 1px solid #686868;
+        margin: 2px;
+        font-family: "Times New Roman";
+      }
+
+      .sommaire {
+        width: 800px;
+        border: solid 0px #e40909;
+        background-color: #ffffff;
+        height: 70px;
+        font-family: "Times New Roman";
+      }
+
+      .som_col_1 {
+        width: 250px;
+        float: left;
+        padding: 6px 8px;
+        font-size: 12px;
+        border: 1px solid #686868;
+        margin: 2px;
+        font-family: "Times New Roman";
+      }
+      .som_col_2 {
+        width: 250px;
+        float: left;
+        padding: 6px 8px;
+        font-size: 12px;
+        border: 1px solid #686868;
+        margin: 2px;
+        font-family: "Times New Roman";
+      }
+      .som_col_3 {
+        width: 230px;
+        float: left;
+        padding: 6px 8px;
+        font-size: 12px;
+        border: 1px solid #686868;
+        margin: 2px;
+        font-family: "Times New Roman";
+      }
+
+      .table_header_wrapper {
+        width: 800px;
+        border: solid 0px #ff0f0f;
+        height: 34px;
+        font-family: "Times New Roman";
+      }
+      .table_header_col1 {
+        width: 35px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #e6e6e6;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 6px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_header_col2 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #e6e6e6;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 6px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_header_col3 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #e6e6e6;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 6px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_header_col4 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #e6e6e6;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 6px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_header_col5 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #e6e6e6;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 7px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_header_col6 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #e6e6e6;
+        color: #000000;
+        margin: 1px;
+        padding: 7px 7px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+
+      .table_col_wrapper {
+        width: 800px;
+        border: solid 0px #014ae6;
+        height: 34px;
+        font-family: "Times New Roman";
+      }
+      .table_col_col1 {
+        width: 35px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #fff;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 6px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_col_col2 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #fff;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 6px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_col_col3 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #fff;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 6px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_col_col4 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #fff;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 6px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_col_col5 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #fff;
+        color: #000000;
+        margin: 2px;
+        padding: 7px 7px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+      .table_col_col6 {
+        width: 130px;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #fff;
+        color: #000000;
+        margin: 1px;
+        padding: 7px 7px;
+        border: solid 1px #c2c2c2;
+        font-family: "Times New Roman";
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="center">LOGO</div>
+      <div class="header">TABLEAU D'AMORTISSEMENT</div>
+
+      <!-- CLIENT  -->
+      <div class="client">
+        <div class="clt_col_1">Code SIG : <strong>200948</strong></div>
+        <div class="clt_col_2">
+          Nom et prénoms : <strong>Jean Paul SIMON</strong>
+        </div>
+      </div>
+      <!-- CLIENT FIN -->
+
+      <!-- SOMMAIRE -->
+      <div class="sommaire">
+        <div>
+          <div class="som_col_1">Prêt: <strong>1 000 000</strong></div>
+          <div class="som_col_2">Périodicité: <strong> Mensuelle</strong></div>
+          <div class="som_col_3">Échéances: <strong> 12</strong></div>
+        </div>
+        <div>
+          <div class="som_col_1">Taux annuel: <strong> 18%</strong></div>
+          <div class="som_col_2">Durée: <strong>12 mois</strong></div>
+          <div class="som_col_3">Différé: <strong>0 mois</strong></div>
+        </div>
+      </div>
+      <!-- TABLE HEADER DEBUT -->
+      <div class="table_header_wrapper">
+        <div class="table_header_col1">N.</div>
+        <div class="table_header_col2">Date</div>
+        <div class="table_header_col3">Mensualité</div>
+        <div class="table_header_col4">Intérêts</div>
+        <div class="table_header_col5">Capital</div>
+        <div class="table_header_col6">Capital restant</div>
+      </div>
+      <!-- TABLE HEADER FIN -->
+      <!-- TABLE COL DEBUT -->
+      <div class="table_col_wrapper">
+        <div class="table_col_col1">1</div>
+        <div class="table_col_col2">20/02/2023</div>
+        <div class="table_col_col3">76 000</div>
+        <div class="table_col_col4">17 500</div>
+        <div class="table_col_col5">1 000 000</div>
+        <div class="table_col_col6">89 000</div>
+      </div>
+      <div class="table_col_wrapper">
+        <div class="table_col_col1">1</div>
+        <div class="table_col_col2">20/02/2023</div>
+        <div class="table_col_col3">76 000</div>
+        <div class="table_col_col4">17 500</div>
+        <div class="table_col_col5">1 000 000</div>
+        <div class="table_col_col6">89 000</div>
+      </div>
+      <!-- TABLE COL FIN -->
+
+      <div class="table_header_wrapper">
+        <div class="table_header_col1">-</div>
+        <div class="table_header_col2">-</div>
+        <div class="table_header_col3">1 450 000</div>
+        <div class="table_header_col4">230 000</div>
+        <div class="table_header_col5">1 000 000</div>
+        <div class="table_header_col6">0</div>
+      </div>
+    </div>
+  </body>
+</html>
