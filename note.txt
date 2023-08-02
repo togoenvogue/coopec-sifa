@@ -1,3 +1,7 @@
-
-
+git init 
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/togoenvogue/coopec-sifa.git
+git push --set-upstream origin main
 git add . && git commit -m "Commit comment" && git push

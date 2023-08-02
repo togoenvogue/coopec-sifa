@@ -17,6 +17,23 @@
 
 **/backend/.env
 **/backend/node_modules/
+#Backup restoration folders
+**/BACKUPS
+**/RESTORE_DB
+**/RESTORE_IMAGES
+
+#Public downloads
+**/public_docs
+**/public_download
+**/public_upload
+**/public_files
+**/public_audio
+**/public
+**/pdf_clients
+**/pdf_credits
+**/pdf_sessions_pv
+**/_lab
+**/sync
 
 **/chat/.env
 **/chat/node_modules
