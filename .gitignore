@@ -40,3 +40,6 @@
 
 **/sig/.env
 **/sig/node_modules
+
+# web
+**/web/node_modules
