@@ -339,10 +339,6 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
-              //"totalMontantAccorde": 0,
-              //"totalMontantAnaylse": 1600320,
-              //"totalMontantRejete": 0,
-              //"totalMontantAjourne": 0,
               ...(doc.totalMontantAccorde = await getSumLoanPV({
                 sessionKey: doc._key,
                 type: "ACCORDÉ",
@@ -391,15 +387,31 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
+              ...(doc.totalMontantAccorde = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ACCORDÉ",
+              })),
+              ...(doc.totalMontantAnaylse = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ANALYSÉ",
+              })),
+              ...(doc.totalMontantRejete = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "REJETÉ",
+              })),
+              ...(doc.totalMontantAjourne = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "AJOURNÉ",
+              })),
               ...(doc.sessionLevelKey = await getSessionLevelDoc({
                 docKey: doc.sessionLevelKey,
-              })),
-              ...(doc.participantKeys = await getUserDocs({
-                userKeyArr: doc.participantKeys,
               })),
               ...(doc.createdBy = await getUserDoc({ userKey: doc.createdBy })),
               ...(doc.officeKey = await getOfficeDoc({
                 officeKey: doc.officeKey,
+              })),
+              ...(doc.participantKeys = await getUserDocs({
+                userKeyArr: doc.participantKeys,
               })),
               ...(doc.fullCount = await docs_cursor.extra.stats.fullCount),
               ...doc,
@@ -422,8 +434,21 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
-              ...(doc.participantKeys = await getUserDocs({
-                userKeyArr: doc.participantKeys,
+              ...(doc.totalMontantAccorde = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ACCORDÉ",
+              })),
+              ...(doc.totalMontantAnaylse = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ANALYSÉ",
+              })),
+              ...(doc.totalMontantRejete = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "REJETÉ",
+              })),
+              ...(doc.totalMontantAjourne = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "AJOURNÉ",
               })),
               ...(doc.sessionLevelKey = await getSessionLevelDoc({
                 docKey: doc.sessionLevelKey,
@@ -431,6 +456,9 @@ const loanSessionResolver = {
               ...(doc.createdBy = await getUserDoc({ userKey: doc.createdBy })),
               ...(doc.officeKey = await getOfficeDoc({
                 officeKey: doc.officeKey,
+              })),
+              ...(doc.participantKeys = await getUserDocs({
+                userKeyArr: doc.participantKeys,
               })),
               ...(doc.fullCount = await docs_cursor.extra.stats.fullCount),
               ...doc,
@@ -464,8 +492,21 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
-              ...(doc.participantKeys = await getUserDocs({
-                userKeyArr: doc.participantKeys,
+              ...(doc.totalMontantAccorde = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ACCORDÉ",
+              })),
+              ...(doc.totalMontantAnaylse = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ANALYSÉ",
+              })),
+              ...(doc.totalMontantRejete = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "REJETÉ",
+              })),
+              ...(doc.totalMontantAjourne = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "AJOURNÉ",
               })),
               ...(doc.sessionLevelKey = await getSessionLevelDoc({
                 docKey: doc.sessionLevelKey,
@@ -473,6 +514,9 @@ const loanSessionResolver = {
               ...(doc.createdBy = await getUserDoc({ userKey: doc.createdBy })),
               ...(doc.officeKey = await getOfficeDoc({
                 officeKey: doc.officeKey,
+              })),
+              ...(doc.participantKeys = await getUserDocs({
+                userKeyArr: doc.participantKeys,
               })),
               ...(doc.fullCount = await docs_cursor.extra.stats.fullCount),
               ...doc,
@@ -502,8 +546,21 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
-              ...(doc.participantKeys = await getUserDocs({
-                userKeyArr: doc.participantKeys,
+              ...(doc.totalMontantAccorde = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ACCORDÉ",
+              })),
+              ...(doc.totalMontantAnaylse = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ANALYSÉ",
+              })),
+              ...(doc.totalMontantRejete = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "REJETÉ",
+              })),
+              ...(doc.totalMontantAjourne = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "AJOURNÉ",
               })),
               ...(doc.sessionLevelKey = await getSessionLevelDoc({
                 docKey: doc.sessionLevelKey,
@@ -511,6 +568,9 @@ const loanSessionResolver = {
               ...(doc.createdBy = await getUserDoc({ userKey: doc.createdBy })),
               ...(doc.officeKey = await getOfficeDoc({
                 officeKey: doc.officeKey,
+              })),
+              ...(doc.participantKeys = await getUserDocs({
+                userKeyArr: doc.participantKeys,
               })),
               ...(doc.fullCount = await docs_cursor.extra.stats.fullCount),
               ...doc,
@@ -539,8 +599,21 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
-              ...(doc.participantKeys = await getUserDocs({
-                userKeyArr: doc.participantKeys,
+              ...(doc.totalMontantAccorde = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ACCORDÉ",
+              })),
+              ...(doc.totalMontantAnaylse = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ANALYSÉ",
+              })),
+              ...(doc.totalMontantRejete = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "REJETÉ",
+              })),
+              ...(doc.totalMontantAjourne = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "AJOURNÉ",
               })),
               ...(doc.sessionLevelKey = await getSessionLevelDoc({
                 docKey: doc.sessionLevelKey,
@@ -548,6 +621,9 @@ const loanSessionResolver = {
               ...(doc.createdBy = await getUserDoc({ userKey: doc.createdBy })),
               ...(doc.officeKey = await getOfficeDoc({
                 officeKey: doc.officeKey,
+              })),
+              ...(doc.participantKeys = await getUserDocs({
+                userKeyArr: doc.participantKeys,
               })),
               ...(doc.fullCount = await docs_cursor.extra.stats.fullCount),
               ...doc,
@@ -574,8 +650,21 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
-              ...(doc.participantKeys = await getUserDocs({
-                userKeyArr: doc.participantKeys,
+              ...(doc.totalMontantAccorde = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ACCORDÉ",
+              })),
+              ...(doc.totalMontantAnaylse = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ANALYSÉ",
+              })),
+              ...(doc.totalMontantRejete = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "REJETÉ",
+              })),
+              ...(doc.totalMontantAjourne = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "AJOURNÉ",
               })),
               ...(doc.sessionLevelKey = await getSessionLevelDoc({
                 docKey: doc.sessionLevelKey,
@@ -583,6 +672,9 @@ const loanSessionResolver = {
               ...(doc.createdBy = await getUserDoc({ userKey: doc.createdBy })),
               ...(doc.officeKey = await getOfficeDoc({
                 officeKey: doc.officeKey,
+              })),
+              ...(doc.participantKeys = await getUserDocs({
+                userKeyArr: doc.participantKeys,
               })),
               ...(doc.fullCount = await docs_cursor.extra.stats.fullCount),
               ...doc,
@@ -607,8 +699,21 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
-              ...(doc.participantKeys = await getUserDocs({
-                userKeyArr: doc.participantKeys,
+              ...(doc.totalMontantAccorde = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ACCORDÉ",
+              })),
+              ...(doc.totalMontantAnaylse = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ANALYSÉ",
+              })),
+              ...(doc.totalMontantRejete = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "REJETÉ",
+              })),
+              ...(doc.totalMontantAjourne = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "AJOURNÉ",
               })),
               ...(doc.sessionLevelKey = await getSessionLevelDoc({
                 docKey: doc.sessionLevelKey,
@@ -616,6 +721,9 @@ const loanSessionResolver = {
               ...(doc.createdBy = await getUserDoc({ userKey: doc.createdBy })),
               ...(doc.officeKey = await getOfficeDoc({
                 officeKey: doc.officeKey,
+              })),
+              ...(doc.participantKeys = await getUserDocs({
+                userKeyArr: doc.participantKeys,
               })),
               ...(doc.fullCount = await docs_cursor.extra.stats.fullCount),
               ...doc,
@@ -639,8 +747,21 @@ const loanSessionResolver = {
           const docs = await docs_cursor.all();
           return docs.map(async (doc) => {
             return {
-              ...(doc.participantKeys = await getUserDocs({
-                userKeyArr: doc.participantKeys,
+              ...(doc.totalMontantAccorde = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ACCORDÉ",
+              })),
+              ...(doc.totalMontantAnaylse = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "ANALYSÉ",
+              })),
+              ...(doc.totalMontantRejete = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "REJETÉ",
+              })),
+              ...(doc.totalMontantAjourne = await getSumLoanPV({
+                sessionKey: doc._key,
+                type: "AJOURNÉ",
               })),
               ...(doc.sessionLevelKey = await getSessionLevelDoc({
                 docKey: doc.sessionLevelKey,
@@ -648,6 +769,9 @@ const loanSessionResolver = {
               ...(doc.createdBy = await getUserDoc({ userKey: doc.createdBy })),
               ...(doc.officeKey = await getOfficeDoc({
                 officeKey: doc.officeKey,
+              })),
+              ...(doc.participantKeys = await getUserDocs({
+                userKeyArr: doc.participantKeys,
               })),
               ...(doc.fullCount = await docs_cursor.extra.stats.fullCount),
               ...doc,
@@ -851,7 +975,6 @@ const loanSessionResolver = {
     if (session_cursor.hasNext) {
       const doc = await session_cursor.next();
       // make sure the session is active
-
       doc.totalMontantAnaylse = await getSumLoanPV({
         sessionKey: doc._key,
         type: "ANALYSÉ",

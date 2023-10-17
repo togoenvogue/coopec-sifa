@@ -166,12 +166,12 @@ export async function _downloadCreditIndividuelFull({
   <div class="div1Col">
     <div style="float: left; width: 200px;">
       <div class="entete">
-        Dossier de crédit ................ <strong>Individuel</strong>
+        Dossier de crédit .......... <strong>Individuel</strong>
       </div>
     </div>
     <div style="float: right; width: 200px;">
       <div class="entete">
-        Date ...................................
+        Date ......... 
         <strong>${await customFullDate({
           timeStamp: await loan.timeStamp,
         })}</strong>
@@ -189,7 +189,7 @@ export async function _downloadCreditIndividuelFull({
     </div>
     <div style="float: right; width: 200px;">
       <div class="entete">
-      Numéro du crédit ...... <strong>${
+      Num crédit : <strong>${
         (await loan.dossierRefSig) != null ? await loan.dossierRefSig : ""
       }</strong>
       </div>
@@ -1258,7 +1258,7 @@ export async function _downloadCreditIndividuelFull({
             intéret) de <strong>${Math.ceil(
               (await loan.montantCreditDemande) + (await loan.interets)
             ).toLocaleString("fr-FR")}</strong> que sollicite
-            <strong>${caution.fullName}</strong>.
+            <strong>${loan.clientKey["fullName"]}</strong>.
           </div>
           <div class="paragraph">
             Je m'engage à payer l'intégralité dudit prêt, intérêts et
@@ -2237,7 +2237,7 @@ export async function _downloadCreditIndividuelFull({
           <!-- DEBUT div2Cols-->
           <div class="div2Cols">
             <div class="label">Nom et prénom du conjoint</div>
-            <div class="value bold">${loan.clientKey["motherFullName"]}</div>
+            <div class="value bold">${loan.conjoint}</div>
           </div>
           <div class="div2Cols">
             <div class="label">Nom et prénom de la mère</div>
@@ -3727,7 +3727,7 @@ export async function _downloadPayCalendar({
           ((i + 1) * 1);*/
 
       const krest = _montantCredit - capital * (i + 1);
-      console.log(krest);
+      //console.log(krest);
       //const filiere = await loan.filieres[index];
       const line = `<div class="table_col_wrapper">
             <div class="table_col_col1">${i + 1}</div>

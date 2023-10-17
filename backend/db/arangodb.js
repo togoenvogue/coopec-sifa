@@ -19,9 +19,9 @@ const db = new Database({
 
 const emailServer = "https://v2.letaviapp.com/api/email/send";
 
-const serverAppUrl = `${process.env.SERVER_APP_URL}`;
+const serverAppUrl = `${process.env.SERVER_APP_URL}:${process.env.PORT_SERVER_APP}`;
 const serverAppUrlNoPort = `${process.env.SERVER_APP_URL}`;
-const serverSigUrl = `${process.env.PORT_SIG_APP}`;
+const serverSigUrl = `${process.env.SERVER_SIG_URL}`;
 const serverBackupUrl = `${process.env.SERVER_BACKUP_URL}`;
 //console.log(`os.hostname(): ${os.hostname()} > serverAppUrl: ${serverAppUrl}`);
 

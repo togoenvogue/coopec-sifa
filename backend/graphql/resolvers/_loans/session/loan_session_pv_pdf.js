@@ -6,7 +6,6 @@ dotenv.config();
 const SERVER_URL = `http://localhost:${process.env.PORT_SERVER_APP}`; // do not change localhost, even on production mode
 
 export async function _loanSessionPvPdf({ pdfName, date, data, pdfFolder }) {
-  console.log();
   // participants list
   let participants = [];
   let participantsBlock = "";

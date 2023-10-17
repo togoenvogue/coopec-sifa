@@ -530,7 +530,7 @@ app.use(
   graphqlHttp({
     schema: graphQlSchema,
     rootValue: graphQlResolvers,
-    graphiql: false,
+    graphiql: true,
   })
 );
 

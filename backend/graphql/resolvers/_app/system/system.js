@@ -412,6 +412,7 @@ const appResolver = {
 
     // remove duplicates from the urls
     const uniqueFileUrls = [...new Set(fileUrls)];
+    console.log(`uniqueFileUrls: ${uniqueFileUrls}`);
     // download the images
     for (let inxo = 0; inxo < uniqueFileUrls.length; inxo++) {
       const url = uniqueFileUrls[inxo];

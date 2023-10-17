@@ -1284,7 +1284,7 @@ const userResolver = {
 
     if (!logUser.hasNext) {
       throw new Error(
-        `Echec de connexion. Utilisateur ou mot de passe incorrect`
+        `Echec de connexion. Vérifiez votre username et votre mot de passe`
       ); // Wrong username
     } else {
       const user = await logUser.next();
